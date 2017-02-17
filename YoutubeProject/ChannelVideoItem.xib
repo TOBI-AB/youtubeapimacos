@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16E154a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
+        <capability name="cells containing NSDateComponentsFormatter" minSystemVersion="10.12"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ChannelVideoItem" customModule="YoutubeProject" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="365"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Fmn-6F-B16">
+                    <rect key="frame" x="5" y="2" width="471" height="358"/>
+                    <view key="contentView" id="G99-cD-VBD">
+                        <rect key="frame" x="0.0" y="0.0" width="471" height="358"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ctm-Pp-iZu">
+                                <rect key="frame" x="0.0" y="0.0" width="471" height="358"/>
+                                <subviews>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BZx-aO-X5o">
+                                        <rect key="frame" x="0.0" y="55" width="50" height="303"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="axesIndependently" id="MFd-BM-YHW"/>
+                                        <connections>
+                                            <binding destination="Ysb-Oc-VVX" name="value" keyPath="self.videoThumbnailImage" id="TQ7-gQ-vI0"/>
+                                        </connections>
+                                    </imageView>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="firstBaseline" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" verticalHuggingPriority="246" verticalCompressionResistancePriority="749" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hg0-Um-jmU">
+                                        <rect key="frame" x="0.0" y="27" width="111" height="20"/>
+                                        <subviews>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7P-Ao-A0V">
+                                                <rect key="frame" x="-2" y="3" width="35" height="16"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="J67-NC-7v7">
+                                                    <font key="font" metaFont="system" size="12"/>
+                                                    <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                                <connections>
+                                                    <binding destination="Ysb-Oc-VVX" name="value" keyPath="self.videoViewCount" id="FUx-6w-j96"/>
+                                                </connections>
+                                            </textField>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0g-Qu-pRE">
+                                                <rect key="frame" x="37" y="3" width="35" height="16"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="x1j-Be-vf7">
+                                                    <font key="font" metaFont="system" size="12"/>
+                                                    <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                                <connections>
+                                                    <binding destination="Ysb-Oc-VVX" name="value" keyPath="self.videoLikeCount" id="cGV-wa-Blr"/>
+                                                </connections>
+                                            </textField>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXM-a4-2Ho">
+                                                <rect key="frame" x="76" y="3" width="37" height="17"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="ltD-oS-33t">
+                                                    <dateComponentsFormatter key="formatter" unitsStyle="positional" id="tZR-QE-a4r"/>
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                                <connections>
+                                                    <binding destination="Ysb-Oc-VVX" name="value" keyPath="self.publishedDate" id="w8X-MD-52R"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                    <textField verticalHuggingPriority="760" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="760" translatesAutoresizingMaskIntoConstraints="NO" id="5Cp-23-teS">
+                                        <rect key="frame" x="-2" y="0.0" width="103" height="19"/>
+                                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Multiline Label" id="XFa-lk-2VI">
+                                            <font key="font" metaFont="system" size="15"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <connections>
+                                            <binding destination="Ysb-Oc-VVX" name="value" keyPath="self.videoTitle" id="JsG-EF-uY5"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ctm-Pp-iZu" secondAttribute="bottom" id="RU5-ej-RL6"/>
+                            <constraint firstItem="ctm-Pp-iZu" firstAttribute="leading" secondItem="G99-cD-VBD" secondAttribute="leading" id="U9U-wD-zD9"/>
+                            <constraint firstAttribute="trailing" secondItem="ctm-Pp-iZu" secondAttribute="trailing" id="W9o-Hg-QaX"/>
+                            <constraint firstItem="ctm-Pp-iZu" firstAttribute="top" secondItem="G99-cD-VBD" secondAttribute="top" id="dcO-0S-tdv"/>
+                        </constraints>
+                    </view>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Fmn-6F-B16" secondAttribute="trailing" constant="7" id="282-l4-BvZ"/>
+                <constraint firstAttribute="bottom" secondItem="Fmn-6F-B16" secondAttribute="bottom" constant="6" id="WYv-lV-wtJ"/>
+                <constraint firstItem="Fmn-6F-B16" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="7" id="hvx-XD-PEe"/>
+                <constraint firstItem="Fmn-6F-B16" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="8" id="yOi-W3-YXd"/>
+            </constraints>
+            <point key="canvasLocation" x="12" y="76"/>
+        </customView>
+        <customObject id="Ysb-Oc-VVX" customClass="ChannelVideoItem" customModule="YoutubeProject" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="Hz6-mo-xeY" id="C0J-Hl-2dA"/>
+            </connections>
+        </customObject>
+    </objects>
+</document>
