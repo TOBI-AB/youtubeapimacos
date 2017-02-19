@@ -18,7 +18,7 @@ class NetworkService {
         Alamofire.request(dataURL).validate().responseData { (dataResponse: DataResponse<Data>) in
             guard (dataResponse.result.isSuccess) else {
                 let error = "Error fetching subscriptions: \(String(describing: dataResponse.result.error?.localizedDescription))"
-                print(error)
+                assertionFailure(error)
                 return
             }
             guard let data = dataResponse.result.value else {

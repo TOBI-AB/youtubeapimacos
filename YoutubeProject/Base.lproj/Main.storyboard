@@ -664,7 +664,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" customClass="MainWindowController" customModule="YoutubeProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -683,17 +683,17 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="YoutubeProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="451" height="422"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="422"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyN-NZ-xWa">
-                                <rect key="frame" x="0.0" y="0.0" width="100" height="422"/>
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="422"/>
                                 <clipView key="contentView" drawsBackground="NO" id="E9Y-Fc-b77">
-                                    <rect key="frame" x="1" y="1" width="98" height="420"/>
+                                    <rect key="frame" x="1" y="1" width="78" height="420"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <collectionView id="vPf-Sc-eTL">
-                                            <rect key="frame" x="0.0" y="0.0" width="98" height="420"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="78" height="420"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="Nva-ZF-auR">
                                                 <size key="itemSize" width="50" height="50"/>
@@ -708,7 +708,7 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="uxV-Ez-CUs"/>
+                                    <constraint firstAttribute="width" constant="80" id="uxV-Ez-CUs"/>
                                 </constraints>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="lSS-EC-sVx">
                                     <rect key="frame" x="1" y="144" width="233" height="15"/>
@@ -720,13 +720,13 @@
                                 </scroller>
                             </scrollView>
                             <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GS9-qW-8XX">
-                                <rect key="frame" x="100" y="0.0" width="351" height="422"/>
+                                <rect key="frame" x="80" y="0.0" width="360" height="422"/>
                                 <clipView key="contentView" drawsBackground="NO" id="M4t-jp-qJI">
-                                    <rect key="frame" x="1" y="1" width="349" height="420"/>
+                                    <rect key="frame" x="1" y="1" width="358" height="420"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <collectionView id="AhK-q6-IAm">
-                                            <rect key="frame" x="0.0" y="0.0" width="349" height="420"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="358" height="420"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="O0R-Mi-Ha2">
                                                 <size key="itemSize" width="50" height="50"/>
@@ -737,7 +737,7 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="351" id="wYE-aa-oDq"/>
+                                    <constraint firstAttribute="width" constant="360" id="wYE-aa-oDq"/>
                                 </constraints>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="G6h-vT-AiL">
                                     <rect key="frame" x="1" y="144" width="233" height="15"/>
@@ -766,7 +766,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60.5" y="731"/>
+            <point key="canvasLocation" x="-155" y="786"/>
         </scene>
     </scenes>
 </document>

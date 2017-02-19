@@ -20,11 +20,22 @@ class ViewController: NSViewController {
     var channelVideos = [Video]()
     
     // Fetch channel Videos
-    lazy var channelId = String()
+    lazy var subscription = Subscription()
+    lazy var channel = Channel()
     lazy var accessToken = String()
     lazy var nextPageToken: String? = nil
     lazy var videosNextPageToken: String? = nil
     
+    // Formatter
+    lazy var numberFormatter: NumberFormatter = {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.maximumFractionDigits = 5
+        //numberFormatter.roundingMode = .down
+        return numberFormatter
+    }()
+    
+    // OAuthAccessToken & OAuthRefreshToken
     lazy var oauthAccessToken: OAuth2Swift = {
         let ouath = OAuth2Swift(consumerKey: Youtube.clientID, consumerSecret: "", authorizeUrl: Path.googleOAuthPath.rawValue, responseType: "code")
         return ouath
@@ -49,7 +60,6 @@ class ViewController: NSViewController {
         self.checkCredential()
         self.setupCollectionView()
         self.channelVideosCollectionView.dataSource = self
-        self.channelVideosCollectionView.delegate = self
     }
     
     

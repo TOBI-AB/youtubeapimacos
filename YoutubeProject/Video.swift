@@ -17,8 +17,10 @@ class Video: NSObject {
     var thumbnail = String()
     var thmbnails = [String: JSON]()
     var likeCount = String()
+    var dislikeCount = String()
     var viewCount = String()
     var videoId = String()
+    var videoPlayer = String()
     
     lazy var accessToken: String = {
 
@@ -46,16 +48,18 @@ class Video: NSObject {
     }
     
     fileprivate func getVideoDetails(videoId: String) {
-        let parameters = ["part": "snippet,statistics,contentDetails", "id":"\(videoId)", "access_token":self.accessToken] as [String: Any]
+        let parameters = ["part": "snippet,statistics,contentDetails,player", "id":"\(videoId)", "access_token":self.accessToken] as [String: Any]
         let host = Youtube.baseURL.appending(Path.videosPath.rawValue)
         let videoDetailsURL = addingParameters(parameters: parameters, to: host)
-        
+       
         NetworkService.shared.fetchData(dataURL: videoDetailsURL) { (json: JSON) in
             
             guard let videoDetails = json["items"].arrayValue.first else { return }
             
-            self.likeCount = videoDetails["statistics"]["likeCount"].stringValue
-            self.viewCount = videoDetails["statistics"]["viewCount"].stringValue
+            self.likeCount    = videoDetails["statistics"]["likeCount"].stringValue
+            self.dislikeCount = videoDetails["statistics"]["dislikeCount"].stringValue
+            self.viewCount    = videoDetails["statistics"]["viewCount"].stringValue
+            self.videoPlayer  = videoDetails["player"]["embedHtml"].stringValue
         }
     }
 }

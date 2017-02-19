@@ -8,6 +8,7 @@
 
 import Cocoa
 
+
 // MARK: UsefDefaults
 extension UserDefaults {
     static func save(_ object: Any, forKey key: String) {
@@ -36,7 +37,7 @@ extension NSImage {
         return NSImage(data: data)
     }
     
-    func roundCorners(width: CGFloat = 192, height: CGFloat = 192) -> NSImage {
+    func roundCorners(width: CGFloat, height: CGFloat) -> NSImage {
         let xRad = width / 2
         let yRad = height / 2
         let existing = self
