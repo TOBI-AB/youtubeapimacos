@@ -166,7 +166,7 @@ extension ViewController {
     
     // Fetch Subscriptions
     func fetchUserSubscriptions(_ accessToken: String, tokenPage: String? = "") {
-        print(accessToken)
+       // print(accessToken)
         var tempArray = [Subscription]()
         
         let host = Youtube.baseURL.appending(Path.subscriptionsPath.rawValue)
